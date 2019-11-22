@@ -1,0 +1,9 @@
+$colors: (pulse: #000);
+
+@each $button,
+$color in $colors {
+    .#{$button} {
+        --color: #{$color};
+        --hover: #{adjust-hue($color, 45deg)};
+    }
+}
