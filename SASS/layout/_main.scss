@@ -4,7 +4,34 @@
     h1 {
         font-family: 'Playfair Display', serif;
         font-size: 3rem;
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: underline;
         align-self: flex-end;
+        text-shadow: 5px 5px 5px black;
+        animation: changeShadow 1000ms alternate infinite;
+    }
+
+    @keyframes changeShadow {
+        0% {
+            text-shadow: 5px 5px 5px black;
+        }
+
+        25% {
+            text-shadow: 5px 5px 5px silver;
+        }
+
+        50% {
+            text-shadow: 5px 5px 5px grey;
+        }
+
+        75% {
+            text-shadow: 5px 5px 5px silver;
+        }
+
+        100% {
+            text-shadow: 5px 5px 5px black;
+        }
     }
 
     p {
