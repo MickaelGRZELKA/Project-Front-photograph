@@ -1,7 +1,102 @@
 .Ifooter {
-    img {
-        width: 3vw;
-        align-self: center;
+    .social-nav {
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+        margin: 10px auto;
+    }
+
+    .social-nav li {
+        display: inline-block;
+    }
+
+    .social-nav a {
+        display: inline-block;
+        float: left;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        color: #FFF;
+        text-decoration: none;
+        cursor: pointer;
+        text-align: center;
+        line-height: 48px;
+        background: #000;
+        position: relative;
+        -moz-transition: 0.5s;
+        -o-transition: 0.5s;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+    }
+
+    .model-3d-0 a {
+        background: #333;
+        float: left;
+        margin: 0 10px;
+        -moz-transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+
+    .model-3d-0 a:hover {
+        -moz-transform: rotateX(-90deg);
+        -webkit-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+    }
+
+    .model-3d-0 a:hover .fornt {
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .model-3d-0 a:hover .back {
+        -moz-backface-visibility: visible;
+        -webkit-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    .model-3d-0 .front,
+    .model-3d-0 .back {
+        width: 48px;
+        height: 48px;
+        background: #333;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -moz-transform: translateZ(18px);
+        -webkit-transform: translateZ(18px);
+        transform: translateZ(18px);
+        -moz-backface-visibility: visible;
+        -webkit-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+
+    .model-3d-0 .back {
+        font-size: 32px;
+        -moz-transform: rotateX(90deg) translateZ(18px);
+        -ms-transform: rotateX(90deg) translateZ(18px);
+        -webkit-transform: rotateX(90deg) translateZ(18px);
+        transform: rotateX(90deg) translateZ(18px);
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .model-3d-0 .twitter .back {
+        background: #00ACED;
+    }
+
+    .model-3d-0 .facebook .back {
+        background: #3B579D;
+    }
+
+    .model-3d-0 .linkedin .back {
+        background: #007BB6;
+    }
+
+    .model-3d-0 .pinterest .back {
+        background: #CB2026;
     }
 
     p {
