@@ -5,22 +5,6 @@
         font-family: 'Playfair Display', serif;
         font-size: 3rem;
         align-self: flex-end;
-        text-transform: uppercase;
-        animation: changeColor 800ms ease-out infinite alternate;
-    }
-
-    @keyframes changeColor {
-        0% {
-            color: gainsboro;
-        }
-
-        50% {
-            color: silver;
-        }
-
-        100% {
-            color: grey;
-        }
     }
 
     p {
