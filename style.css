@@ -54,9 +54,95 @@ button {
   justify-content: flex-end;
 }
 
-.Ifooter img {
-  width: 3vw;
-  align-self: center;
+.Ifooter .social-nav {
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  margin: 10px auto;
+}
+.Ifooter .social-nav li {
+  display: inline-block;
+}
+.Ifooter .social-nav a {
+  display: inline-block;
+  float: left;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 48px;
+  background: #000;
+  position: relative;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.Ifooter .model-3d-0 a {
+  background: #333;
+  float: left;
+  margin: 0 10px;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.Ifooter .model-3d-0 a:hover {
+  -moz-transform: rotateX(-90deg);
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+.Ifooter .model-3d-0 a:hover .fornt {
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.Ifooter .model-3d-0 a:hover .back {
+  -moz-backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+.Ifooter .model-3d-0 .front,
+.Ifooter .model-3d-0 .back {
+  width: 48px;
+  height: 48px;
+  background: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -moz-transform: translateZ(18px);
+  -webkit-transform: translateZ(18px);
+  transform: translateZ(18px);
+  -moz-backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+.Ifooter .model-3d-0 .back {
+  font-size: 32px;
+  -moz-transform: rotateX(90deg) translateZ(18px);
+  -ms-transform: rotateX(90deg) translateZ(18px);
+  -webkit-transform: rotateX(90deg) translateZ(18px);
+  transform: rotateX(90deg) translateZ(18px);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.Ifooter .model-3d-0 .twitter .back {
+  background: #00ACED;
+}
+.Ifooter .model-3d-0 .facebook .back {
+  background: #3B579D;
+}
+.Ifooter .model-3d-0 .google-plus .back {
+  background: #DD4A3A;
+}
+.Ifooter .model-3d-0 .linkedin .back {
+  background: #007BB6;
+}
+.Ifooter .model-3d-0 .pinterest .back {
+  background: #CB2026;
 }
 .Ifooter p {
   font-family: "Playfair Display", serif;
@@ -183,43 +269,24 @@ button {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
   align-self: flex-end;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-  color: transparent;
+  animation: changeColor 800ms ease-out infinite alternate;
+}
+@keyframes changeColor {
+  0% {
+    color: gainsboro;
+  }
+  50% {
+    color: silver;
+  }
+  100% {
+    color: grey;
+  }
 }
 .Imain p {
   font-family: "Playfair Display", serif;
   font-size: 1.5rem;
   font-weight: bold;
-}
-.Imain h1:before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #000;
-  overflow: hidden;
-  border-right: 1px solid #000;
-  animation: type 10s linear infinite;
-  white-space: nowrap;
-}
-@keyframes type {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
 }
 
 .titleGallery {
